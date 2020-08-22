@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
@@ -49,4 +50,6 @@ client.on('message', message => {
     
 });
 
-client.login(''); //insert token
+const token = require('./botToken.js');
+
+client.login(token.getBotToken());
